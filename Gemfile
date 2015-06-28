@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 
+#Use postgresql as the database for production
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
@@ -9,11 +14,8 @@ gem 'sqlite3', group: [:development, :test]
 #Use bootstrap library for styles
 gem 'bootstrap-sass', '3.3.1'
 
-#Use postgresql as the database for production
-group :production do
-  gem 'pg'
-  gem 'rails_12factor'
-end
+#Use font-awesome library for icons
+gem 'font-awesome-sass', '4.2.0'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '4.0.3'
